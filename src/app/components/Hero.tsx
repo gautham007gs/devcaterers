@@ -6,9 +6,9 @@ export function Hero() {
   };
 
   return (
-    <section className="relative pt-20 md:pt-24 min-h-[90vh] flex flex-col">
+    <section className="relative pt-24 md:pt-32 min-h-[90vh] flex flex-col">
       {/* Full-width banner image at top with overlay and centered content */}
-      <div className="relative w-full flex-grow min-h-[70vh] md:min-h-[85vh] overflow-hidden flex items-center">
+      <div className="relative w-full flex-grow min-h-[75vh] md:min-h-[85vh] overflow-hidden flex items-center">
         <img
           src="/src/assets/hero-bg.jpg"
           alt="Delicious professional catering spread"
@@ -93,7 +93,7 @@ export function Hero() {
         </div>
 
         {/* Floating Quality Badge */}
-        <div className="absolute bottom-10 right-10 bg-white/95 backdrop-blur-md text-foreground rounded-2xl px-6 py-4 shadow-2xl border border-white/50 flex items-center gap-4 transform hover:scale-105 transition-transform hidden md:flex">
+        <div className="absolute bottom-10 right-10 bg-white/95 backdrop-blur-md text-foreground rounded-2xl px-6 py-4 shadow-2xl border border-white/50 flex items-center gap-4 transform hover:scale-105 transition-transform hidden lg:flex">
           <div className="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500 shadow-inner">
             <Leaf className="w-6 h-6 text-white" />
           </div>
