@@ -46,107 +46,113 @@ const testimonials = [
   }
 ];
 
+import { Star, Quote, ChevronLeft, ChevronRight } from 'lucide-react';
+import * as React from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+
+const testimonials = [
+  {
+    name: 'Priya Sharma',
+    event: 'Wedding Reception',
+    rating: 5,
+    text: "DevCaterers made our wedding reception absolutely perfect! The food was delicious, presentation was beautiful, and service was impeccable. All our guests were thoroughly impressed.",
+    location: 'Bangalore'
+  },
+  {
+    name: 'Rajesh Kumar',
+    event: 'Corporate Gala',
+    rating: 5,
+    text: "Outstanding professionalism and food quality. We've been using them for 2 years and they never disappoint. The pure veg variety is amazing!",
+    location: 'Whitefield'
+  },
+  {
+    name: 'Anjali Reddy',
+    event: 'Birthday Party',
+    rating: 5,
+    text: "Organized my daughter's 1st birthday. The team was cooperative and flexible. Everyone loved the live chaat counter. Thank you!",
+    location: 'HSR Layout'
+  }
+];
+
 export function Testimonials() {
   const [index, setIndex] = React.useState(0);
 
+  const next = () => setIndex((prev) => (prev + 1) % testimonials.length);
+  const prev = () => setIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+
   return (
-    <section id="testimonials" className="py-16 md:py-24 bg-white">
+    <section id="testimonials" className="py-24 bg-gray-900 text-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            What Our <span className="text-[#D97706]">Customers Say</span>
-          </h2>
-          <p className="text-base md:text-lg text-muted-foreground">
-            Don't just take our word for it. Here's what our happy customers have to say about us
-          </p>
-        </div>
-
-        {/* Mobile: single card view (no horizontal scroll) */}
-        <div className="sm:hidden px-4">
-          <div className="flex items-center justify-between mb-4">
-            <button
-              aria-label="Previous testimonial"
-              onClick={() => setIndex((i) => Math.max(0, i - 1))}
-              className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 disabled:opacity-50"
-              disabled={index === 0}
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
             >
-              ‹
-            </button>
-
-            <div className="text-sm text-muted-foreground">{index + 1} / {testimonials.length}</div>
-
-            <button
-              aria-label="Next testimonial"
-              onClick={() => setIndex((i) => Math.min(testimonials.length - 1, i + 1))}
-              className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 disabled:opacity-50"
-              disabled={index === testimonials.length - 1}
-            >
-              ›
-            </button>
+              <h2 className="text-4xl md:text-5xl font-black mb-8 leading-tight">
+                Voices of Our <br />
+                <span className="text-emerald-500">Happy Guests</span>
+              </h2>
+              <div className="w-20 h-2 bg-emerald-500 rounded-full mb-8" />
+              <p className="text-xl text-gray-400 font-medium mb-12">
+                We take pride in creating moments that linger in the memory through exceptional culinary experiences.
+              </p>
+              
+              <div className="flex gap-4">
+                <button
+                  onClick={prev}
+                  className="p-4 rounded-full border border-white/10 hover:bg-white/5 transition-colors"
+                >
+                  <ChevronLeft className="w-6 h-6" />
+                </button>
+                <button
+                  onClick={next}
+                  className="p-4 rounded-full bg-emerald-600 hover:bg-emerald-700 transition-colors"
+                >
+                  <ChevronRight className="w-6 h-6" />
+                </button>
+              </div>
+            </motion.div>
           </div>
 
-          <div className="max-w-md mx-auto bg-white rounded-2xl p-4 shadow-md border border-[#8B2E2E]/10 overflow-visible">
-            <div className="flex gap-2 mb-3">
-              {[...Array(testimonials[index].rating)].map((_, k) => (
-                <Star key={k} className="w-4 h-4 text-[#FBBF24] fill-[#FBBF24]" />
-              ))}
-            </div>
-
-            <p className="text-muted-foreground text-sm mb-3 break-words whitespace-normal">"{testimonials[index].text}"</p>
-
-            <div className="pt-2 border-t border-[#8B2E2E]/20">
-              <p className="font-semibold text-foreground">{testimonials[index].name}</p>
-              <p className="text-xs text-[#8B2E2E]">{testimonials[index].event}</p>
-            </div>
-          </div>
-        </div>
-
-          {/* Desktop: grid */}
-          <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div
+          <div className="relative">
+            <AnimatePresence mode="wait">
+              <motion.div
                 key={index}
-                className="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border border-[#8B2E2E]/10 relative"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
+                className="bg-white/5 backdrop-blur-xl border border-white/10 p-10 md:p-16 rounded-[2rem] relative"
               >
-                <div className="absolute top-6 right-6 opacity-10">
-                  <Quote className="w-16 h-16 text-[#8B2E2E]" />
+                <Quote className="absolute top-10 right-10 w-20 h-20 text-emerald-500/20" />
+                
+                <div className="flex gap-1 mb-8">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />
+                  ))}
                 </div>
 
-                <div className="flex gap-1 mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-[#FBBF24] fill-[#FBBF24]" />
-                    ))}
-                </div>
-
-                <p className="text-muted-foreground mb-6 leading-relaxed relative z-10 text-base whitespace-normal break-words">
-                  "{testimonial.text}"
+                <p className="text-2xl md:text-3xl font-medium leading-relaxed italic mb-10">
+                  "{testimonials[index].text}"
                 </p>
 
-                <div className="pt-4 border-t border-[#8B2E2E]/20">
-                  <p className="font-bold text-foreground mb-1">{testimonial.name}</p>
-                  <p className="text-sm text-[#8B2E2E] mb-1">{testimonial.event}</p>
-                  <p className="text-xs text-muted-foreground">{testimonial.location}</p>
+                <div className="flex items-center gap-6">
+                  <div className="w-16 h-16 rounded-full bg-emerald-600 flex items-center justify-center text-2xl font-black">
+                    {testimonials[index].name[0]}
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-bold">{testimonials[index].name}</h4>
+                    <p className="text-emerald-500 font-medium">{testimonials[index].event}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
-
-        {/* Trust Badge */}
-        <div className="mt-8 md:mt-12 text-center">
-            <div className="inline-flex flex-col md:flex-row items-center gap-4 px-6 py-4 rounded-2xl border border-[#D97706]/20" style={{ backgroundColor: 'var(--cream)' }}>
-            <div className="flex gap-1">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-6 h-6 text-[#FBBF24] fill-[#FBBF24]" />
-              ))}
-            </div>
-            <div className="text-left">
-              <p className="text-2xl font-bold text-foreground">4.9 out of 5</p>
-              <p className="text-sm text-muted-foreground">Based on 500+ reviews</p>
-            </div>
+              </motion.div>
+            </AnimatePresence>
           </div>
         </div>
       </div>
     </section>
+  );
+}
   );
 }
