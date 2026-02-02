@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Sitemap: https://devcaterers.in/sitemap.xml
+
+# Crawl delay is optional - adjust as needed
+# Crawl-delay: 10
+
+# Block any staging or admin areas
+Disallow: /admin/
+Disallow: /wp-admin/
