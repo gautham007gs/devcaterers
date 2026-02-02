@@ -23,10 +23,8 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center gap-2">
-            <div className="p-2 bg-emerald-600 rounded-lg">
-              <span className="text-white font-bold text-xl">D</span>
-            </div>
+          <div className="flex items-center gap-3">
+            <img src="/src/assets/logo.png" alt="Dev Caterers Logo" className="w-10 h-10 object-contain rounded-lg shadow-sm" />
             <div>
               <h1 className={`text-xl md:text-2xl font-black tracking-tight transition-colors ${
                 scrolled ? 'text-gray-900' : 'text-white'

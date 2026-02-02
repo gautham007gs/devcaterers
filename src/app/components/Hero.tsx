@@ -6,9 +6,9 @@ export function Hero() {
   };
 
   return (
-    <section className="relative">
+    <section className="relative pt-20 md:pt-24 min-h-[90vh] flex flex-col">
       {/* Full-width banner image at top with overlay and centered content */}
-      <div className="relative w-full h-[85vh] md:h-[90vh] lg:h-[95vh] overflow-hidden">
+      <div className="relative w-full flex-grow min-h-[70vh] md:min-h-[85vh] overflow-hidden flex items-center">
         <img
           src="/src/assets/hero-bg.jpg"
           alt="Delicious professional catering spread"
@@ -20,7 +20,7 @@ export function Hero() {
         <div className="absolute inset-0 bg-black/50 bg-gradient-to-r from-black/70 via-black/40 to-transparent pointer-events-none" />
 
         {/* Main overlay content */}
-        <div className="relative max-w-7xl mx-auto h-full px-4 sm:px-6 lg:px-8 flex items-center">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 flex items-center">
           <div className="w-full lg:w-2/3 text-white">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-md rounded-full border border-white/20 mb-6 animate-in fade-in slide-in-from-bottom-4 duration-700">
               <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
