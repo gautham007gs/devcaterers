@@ -1,6 +1,4 @@
-import { Phone, Mail, MapPin, Clock, ArrowRight } from 'lucide-react';
-
-import { Phone, Mail, MapPin, Clock, ArrowRight, Instagram, Facebook, Twitter } from 'lucide-react';
+import { Phone, MapPin, Clock, ArrowRight, Instagram, Facebook, Twitter } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export function FinalCTA() {

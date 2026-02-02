@@ -1,35 +1,3 @@
-import { ChefHat } from 'lucide-react';
-
-const galleryItems = [
-  {
-    image:
-      'https://images.unsplash.com/photo-1767114915936-745dd372f1d8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmRpYW4lMjByb3RpJTIwbmFhbiUyMGJyZWFkJTIwY3Vycnl8ZW58MXx8fHwxNzY5OTQwMjM4fDA&ixlib=rb-4.1.0&q=80&w=1080',
-    title: 'Breads & Curries',
-    category: 'Main Course'
-  },
-  {
-    image: 'https://restaurantindia.s3.ap-south-1.amazonaws.com/s3fs-public/2025-03/dosa.jpg',
-    title: 'South Indian Delights',
-    category: 'Breakfast'
-  },
-  {
-    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrkAhAyAU05HUXatMezoyrJV6iEPzevOnZ5A&s',
-    title: 'Aromatic Biryani',
-    category: 'Main Course'
-  },
-  {
-    image:
-      'https://images.unsplash.com/photo-1758910536889-43ce7b3199fd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmRpYW4lMjBzd2VldHMlMjBkZXNzZXJ0JTIwZ3VsYWIlMjBqYW11bnxlbnwxfHx8fDE3Njk5NDAyMzd8MA&ixlib=rb-4.1.0&q=80&w=1080',
-    title: 'Traditional Sweets',
-    category: 'Desserts'
-  },
-  {
-    image: 'https://cf0316.s3.amazonaws.com/cookificom/menu/50095/79435e.jpg',
-    title: 'Chaat & Snacks',
-    category: 'Starters'
-  }
-];
-
 import { ChefHat, Camera } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -120,7 +88,5 @@ export function Gallery() {
         </div>
       </div>
     </section>
-  );
-}
   );
 }

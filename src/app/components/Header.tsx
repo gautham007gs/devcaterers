@@ -1,7 +1,4 @@
 import * as React from 'react';
-import { Phone, Mail } from 'lucide-react';
-
-import * as React from 'react';
 import { Phone, Mail, Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -111,7 +108,5 @@ export function Header() {
         )}
       </AnimatePresence>
     </header>
-  );
-}
   );
 }

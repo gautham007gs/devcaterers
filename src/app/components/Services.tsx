@@ -1,41 +1,4 @@
 import { Heart, Cake, Briefcase, Home, ArrowRight } from 'lucide-react';
-
-const services = [
-  {
-    icon: Heart,
-    title: 'Wedding Catering',
-    description: 'Make your special day unforgettable with our premium wedding catering services. Traditional menus, modern presentation, and flawless execution.',
-    image: 'https://images.unsplash.com/photo-1612872642947-931dc3bcb5ac?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmRpYW4lMjB3ZWRkaW5nJTIwY2F0ZXJpbmclMjBjZXJlbW9ueXxlbnwxfHx8fDE3Njk5NDAxNjl8MA&ixlib=rb-4.1.0&q=80&w=1080',
-    color: 'bg-[#8B2E2E]',
-    lightColor: 'bg-[#FEF3C7]'
-  },
-  {
-    icon: Cake,
-    title: 'Birthday Parties',
-    description: 'Celebrate another year with delicious vegetarian cuisine. From kids parties to milestone celebrations, we make every birthday memorable.',
-    image: 'https://images.unsplash.com/photo-1630237399805-9c950e5685b8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiaXJ0aGRheSUyMHBhcnR5JTIwY2VsZWJyYXRpb24lMjBmb29kfGVufDF8fHx8MTc2OTk0MDE2OXww&ixlib=rb-4.1.0&q=80&w=1080',
-    color: 'bg-[#16A34A]',
-    lightColor: 'bg-green-50'
-  },
-  {
-    icon: Briefcase,
-    title: 'Corporate Catering',
-    description: 'Professional catering for conferences, seminars, team meetings, and corporate events. Timely service and consistent quality guaranteed.',
-    image: 'https://images.unsplash.com/photo-1769638913840-2ca96d90e8a9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb3Jwb3JhdGUlMjBldmVudCUyMGNhdGVyaW5nJTIwYnVmZmV0fGVufDF8fHx8MTc2OTk0MDE3MHww&ixlib=rb-4.1.0&q=80&w=1080',
-    color: 'bg-[#CA8A04]',
-    lightColor: 'bg-amber-50'
-  },
-  {
-    icon: Home,
-    title: 'Traditional Functions',
-    description: 'Authentic catering for housewarming, naming ceremonies, engagements, and all traditional events. We respect and honor your customs.',
-    image: 'https://images.unsplash.com/photo-1768341396286-9aed22a17eaf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0cmFkaXRpb25hbCUyMGluZGlhbiUyMGNlcmVtb255JTIwaG91c2V3YXJtaW5nfGVufDF8fHx8MTc2OTk0MDE3MHww&ixlib=rb-4.1.0&q=80&w=1080',
-    color: 'bg-[#DC2626]',
-    lightColor: 'bg-red-50'
-  }
-];
-
-import { Heart, Cake, Briefcase, Home, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const services = [

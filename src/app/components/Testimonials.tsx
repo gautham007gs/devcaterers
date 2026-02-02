@@ -1,51 +1,3 @@
-import { Star, Quote } from 'lucide-react';
-import * as React from 'react';
-
-const testimonials = [
-  {
-    name: 'Priya Sharma',
-    event: 'Wedding Reception',
-    rating: 5,
-    text: "DevCaterers made our wedding reception absolutely perfect! The food was delicious, presentation was beautiful, and service was impeccable. All our 800 guests were thoroughly impressed. Highly recommended!",
-    location: 'Koramangala, Bangalore'
-  },
-  {
-    name: 'Rajesh Kumar',
-    event: 'Corporate Event',
-    rating: 5,
-    text: "We've been using DevCaterers for our company events for the past 2 years. Their professionalism, punctuality, and food quality are outstanding. The variety in their vegetarian menu is amazing!",
-    location: 'Whitefield, Bangalore'
-  },
-  {
-    name: 'Anjali Reddy',
-    event: 'Birthday Party',
-    rating: 5,
-    text: "Organized my daughter's 1st birthday with DevCaterers. The team was so cooperative and flexible with our requests. Food was fresh and tasty. Everyone loved the chaat counter. Thank you!",
-    location: 'HSR Layout, Bangalore'
-  },
-  {
-    name: 'Venkat Iyer',
-    event: 'Housewarming',
-    rating: 5,
-    text: "Excellent service for our housewarming ceremony! They understood our traditional requirements perfectly and delivered authentic South Indian food. The entire setup was handled professionally.",
-    location: 'Jayanagar, Bangalore'
-  },
-  {
-    name: 'Meera Patel',
-    event: 'Engagement Ceremony',
-    rating: 5,
-    text: "From menu planning to execution, everything was perfect! The food quality was top-notch and the presentation was elegant. Our guests are still talking about how delicious everything was.",
-    location: 'Indiranagar, Bangalore'
-  },
-  {
-    name: 'Arun Krishnan',
-    event: 'Conference Catering',
-    rating: 5,
-    text: "DevCaterers has been our go-to choice for all conferences. They handle large gatherings with ease, maintain food quality throughout, and their staff is well-trained and courteous.",
-    location: 'Electronic City, Bangalore'
-  }
-];
-
 import { Star, Quote, ChevronLeft, ChevronRight } from 'lucide-react';
 import * as React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -152,7 +104,5 @@ export function Testimonials() {
         </div>
       </div>
     </section>
-  );
-}
   );
 }
